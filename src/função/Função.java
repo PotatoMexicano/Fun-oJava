@@ -28,6 +28,8 @@ public class Função {
             String[] temp;
             int size = 0;
             double resultado = 0;
+            output.println("F(x) = x² + x");
+            output.println("");
             while ((num = input.readLine()) != null) {
                 temp = num.split(" ");
                 vetor.addAll(Arrays.asList(temp));
@@ -35,7 +37,8 @@ public class Função {
                 Arrays.sort(temp);
                 for (int i = 0; i < size; i++) {
                     resultado = (Math.pow(Integer.valueOf(temp[i]), 2) + Integer.valueOf(temp[i]));
-                    System.out.println(temp[i] + " -- " + resultado);
+                    output.println("F("+temp[i]+") = "+resultado);
+                    //System.out.println(temp[i] + " -- " + resultado);
                 }
             }
         } finally {
